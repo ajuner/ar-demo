@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const port = 9000;
 
 module.exports = {
-  entry: "./src/index.ts",
+  entry: "./src/index.js",
   resolve: {
     extensions: [".js", ".ts", ".tsx", ".d.ts"],
   },

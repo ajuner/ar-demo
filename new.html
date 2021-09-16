@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<!-- <link rel="stylesheet" href="./specs.css"> -->
+<style>
+  @charset "UTF-8";
+
+  @-webkit-keyframes ani {
+
+    /*这个动画的意思就是宽度从0-100*/
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes ani {
+
+    /*这个动画的意思就是宽度从0-100*/
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  .main {
+    width: 100%;
+    height: 100%;
+    padding-top: 46px;
+  }
+
+  .main-container {
+    width: 1340px;
+    margin: 0 auto;
+  }
+
+  .main-container section {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .main-container section .left,
+  .main-container section .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .main-container section .left-img {
+    width: 650px;
+    height: 320px;
+  }
+
+  .main-container section .left-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .main-container section .left-bottom span {
+    width: 105px;
+    position: relative;
+    cursor: pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+    line-height: 29px;
+  }
+
+  .main-container section .left-bottom span p {
+    height: 0px;
+    width: 0px;
+    background: #f5b54b;
+    margin: 0;
+    position: absolute;
+    top: 12px;
+    opacity: 0.5;
+  }
+
+  .main-container section .left .activeItemClass p {
+    width: 77px;
+    height: 7px;
+  }
+
+  .main-container section .left-tab {
+    margin: 32px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .main-container section .left-tab-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-right: 40px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .main-container section .left-tab-item span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #999999;
+    line-height: 21px;
+  }
+
+  .main-container section .left-tab-item p {
+    width: 0px;
+    height: 0px;
+    border-radius: 9px;
+    background: #1b76de;
+    margin-top: 8px;
+  }
+
+  .main-container section .left-tab .activeTabClass span {
+    color: #1b76de;
+  }
+
+  .main-container section .left-tab .activeTabClass p {
+    -webkit-animation: ani 0.5s forwards alternate;
+    animation: ani 0.5s forwards alternate;
+    width: 77px;
+    height: 2px;
+  }
+
+  .main-container section .right {
+    margin-left: 41px;
+  }
+
+  .main-container section .right h2 {
+    height: 26px;
+    /* h2-详情描述标题 */
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: #333333;
+    line-height: 26px;
+  }
+
+  .main-container section .right h2:nth-child(2) {
+    color: #1b76de;
+  }
+
+  .main-container section .right article {
+    margin-bottom: 32px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #333333;
+    line-height: 22px;
+  }
+
+  .main-container section .right-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .main-container section .right-bottom section {
+    width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .main-container section .right-bottom section p {
+    width: 100%;
+    height: 0px;
+    margin-top: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .main-container section .right-bottom-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+    line-height: 29px;
+  }
+
+  .main-container section .right-bottom-txt {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #666666;
+    line-height: 29px;
+  }
+
+  .main-container section .right-bottom span {
+    margin-top: 40px;
+    border-bottom: 1px solid #000000;
+    cursor: pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #333333;
+    line-height: 22px;
+  }
+
+  .main-container .part2,
+  .main-container .part3,
+  .main-container .part4,
+  .main-container .part5 {
+    margin-top: 87px;
+  }
+
+  .main-container .part4,
+  .main-container .part5 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .main-container .part4 .desc-content,
+  .main-container .part5 .desc-content {
+    height: 100%;
+    width: calc(100% - 60px);
+  }
+
+  .main-container .video {
+    width: 650px;
+    height: 320px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .main {
+      padding: 7px 0;
+    }
+
+    .main-container {
+      width: unset;
+      padding: 0 3%;
+    }
+
+    .main-container section {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .main-container section .left,
+    .main-container section .right {
+      width: 100%;
+    }
+
+    .main-container section .left-img {
+      width: 100%;
+      height: 133px;
+    }
+
+    .main-container section .left-bottom span {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      color: #333333;
+      line-height: 29px;
+    }
+
+    .main-container section .left-tab {
+      margin: 17px 0 0 0;
+    }
+
+    .main-container section .left-tab-item {
+      margin-right: 24px;
+    }
+
+    .main-container section .left-tab-item span {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      color: #999999;
+      line-height: 16px;
+    }
+
+    .main-container section .left-tab-item p {
+      width: 0px;
+      height: 0px;
+      border-radius: 9px;
+      background: #1b76de;
+      margin-top: 8px;
+    }
+
+    .main-container section .right {
+      margin-left: 0px;
+    }
+
+    .main-container section .right h2 {
+      height: 29px;
+      /* h2-详情描述标题 */
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      color: #333333;
+      line-height: 29px;
+    }
+
+    .main-container section .right h2:nth-child(2) {
+      margin-top: 8px;
+    }
+
+    .main-container section .right article {
+      margin-bottom: 16px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      color: #333333;
+      line-height: 21px;
+    }
+
+    .main-container section .right-bottom section {
+      width: 50%;
+    }
+
+    .main-container section .right-bottom section p {
+      margin-top: 8px;
+    }
+
+    .main-container section .right-bottom-title {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      color: #333333;
+      line-height: 29px;
+    }
+
+    .main-container section .right-bottom-txt {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      color: #666666;
+      line-height: 29px;
+    }
+
+    .main-container section .right-bottom span {
+      margin-top: 10px;
+      border-bottom: 1px solid #000000;
+      cursor: pointer;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      color: #333333;
+      line-height: 22px;
+    }
+
+    .main-container .part2 {
+      margin-top: 40px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+    }
+
+    .main-container .part3 {
+      margin-top: 40px;
+    }
+
+    .main-container .part4,
+    .main-container .part5 {
+      margin-top: 40px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .main-container .video {
+      width: 100%;
+      height: 210px;
+    }
+
+    .main-container .part5 {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1300px) {
+    .main {
+      padding-top: 46px;
+    }
+
+    .main-container {
+      width: unset;
+      padding: 0 3%;
+    }
+
+    .main-container section {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .main-container section .left,
+    .main-container section .right {
+      width: 100%;
+    }
+
+    .main-container section .left-img {
+      width: 100%;
+      height: auto;
+    }
+
+    .main-container section .left-bottom span {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      color: #333333;
+      line-height: 29px;
+    }
+
+    .main-container section .left-tab {
+      margin: 32px 0 0 0;
+    }
+
+    .main-container section .left-tab-item {
+      margin-right: 40px;
+    }
+
+    .main-container section .left-tab-item span {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      color: #999999;
+      line-height: 21px;
+    }
+
+    .main-container section .left-tab-item p {
+      width: 0px;
+      height: 0px;
+      border-radius: 9px;
+      background: #1b76de;
+      margin-top: 8px;
+    }
+
+    .main-container section .right {
+      margin-left: 0px;
+    }
+
+    .main-container section .right h2 {
+      height: 29px;
+      /* h2-详情描述标题 */
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      color: #333333;
+      line-height: 26px;
+    }
+
+    .main-container section .right h2:nth-child(2) {
+      margin-top: 8px;
+    }
+
+    .main-container section .right article {
+      margin-bottom: 16px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      color: #333333;
+      line-height: 22px;
+    }
+
+    .main-container section .right-bottom section {
+      width: 50%;
+    }
+
+    .main-container section .right-bottom section p {
+      margin-top: 8px;
+    }
+
+    .main-container section .right-bottom-title {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      color: #333333;
+      line-height: 29px;
+    }
+
+    .main-container section .right-bottom-txt {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      color: #666666;
+      line-height: 29px;
+    }
+
+    .main-container section .right-bottom span {
+      margin-top: 10px;
+      border-bottom: 1px solid #000000;
+      cursor: pointer;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      color: #333333;
+      line-height: 22px;
+    }
+
+    .main-container .part2 {
+      margin-top: 40px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+    }
+
+    .main-container .part3 {
+      margin-top: 40px;
+    }
+
+    .main-container .part4 {
+      margin-top: 40px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .main-container .video {
+      width: 100%;
+      height: 350px;
+    }
+
+    .main-container .part5 {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+    }
+  }
+
+  /*# sourceMappingURL=specs.css.map */
+</style>
+
+<body>
+  <div id="app">
+    <div class="main">
+      <div class="main-container">
+        <!-- part1-start -->
+        <section>
+          <div class="left">
+
+            <!--如果需要换成图片，把以下这段iframe 更换为： <img src="" alt="" class="left-img" id="firstImage" /> ；同时将 id="firstImage" 括号中的内容按顺序依次改为 firstImage secondImage 等-->
+            <!-- 图片和视频连接在script中，请自行寻找替换 -->
+            <img src="" alt="" class="left-img" id="firstImage" />
+
+            <div class="left-tab" id="firstTitle"></div>
+
+            <div class="left-bottom" id="firstTabs"></div>
+          </div>
+
+          <div class="right">
+            <h2>Desktop Dimensions</h2>
+            <h2 id="firstText"></h2>
+            <article id="firstArticle"></article>
+            <div class="right-bottom" id="firstContent"></div>
+          </div>
+        </section>
+        <!-- part1-end -->
+
+        <!-- part2-start -->
+        <section class="part2">
+          <div class="right" style="margin-left: 0px">
+            <h2>Frame Dimensions</h2>
+            <h2 id="secondText"></h2>
+            <article id="secondArticle"></article>
+            <div class="right-bottom" id="secondContent"></div>
+          </div>
+
+          <div class="left">
+            <!--如果需要换成图片，把以下这段iframe 更换为： <img src="" alt="" class="left-img" id="secondImage" /> ；同时将 id="secondImage" 括号中的内容按顺序依次改为 firstImage secondImage 等-->
+            <!-- 图片和视频连接在script中，请自行寻找替换 -->
+          <img src="" alt="" class="left-img" id="secondImage" /> 
+            <div class="left-tab" id="secondTitle"></div>
+          </div>
+        </section>
+        <!-- part2-end -->
+
+        <!-- part3-start -->
+        <section class="part3">
+          <div class="left">
+            <!--如果需要换成图片，把以下这段iframe 更换为： <img src="" alt="" class="left-img" id="thirdImage" /> ；同时将 id="thirdImage" 括号中的内容按顺序依次改为 firstImage secondImage 等-->
+            <!-- 图片和视频连接在script中，请自行寻找替换 -->
+             <img src="" alt="" class="left-img" id="thirdImage" />
+            <div class="left-tab" id="thirdTitle"></div>
+          </div>
+
+          <div class="right">
+            <h2>Keypad Dimensions</h2>
+            <h2 id="thirdText"></h2>
+            <article id="thirdArticle"></article>
+            <div class="right-bottom" id="thirdContent"></div>
+          </div>
+        </section>
+        <!-- part3-end -->
+
+<!-- part4-start -->
+        <section class="part4">
+          <div class="right" style="margin-left: 0px">
+            <h2>Installation Guides</h2>
+            <h2 id="forthText"></h2>
+            <article id="forthArticle"></article>
+            <div class="right-bottom" id="forthContent"></div>
+          </div>
+
+          <div class="left">
+            <!--如果需要换成图片，把以下这段iframe 更换为： <img src="" alt="" class="left-img" id="secondImage" /> ；同时将 id="secondImage" 括号中的内容按顺序依次改为 firstImage secondImage 等-->
+            <!-- 图片和视频连接在script中，请自行寻找替换 -->
+            <iframe src="" title="YouTube video player" frameborder="0" class="video" id="forthVideo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""></iframe>
+            <div class="left-tab" id="forthTitle"></div>
+          </div>
+        </section>
+        <!-- part4-end -->
+
+    
+
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<script>
+  const firstTabs = {
+    Rectangular: ["R 48” x 24”", "R 55” x 28”", "R 60” x 30”", "R 72” x 30”", "R 78” x 30”"],
+    Curved: ["C 48” x 24”", "C 55” x 28”", "C 60” x 30”", "C 72” x 30”", "C 78” x 30”"],
+  };
+  const secondTabs = ["EC3", "EC4", "EC5"];
+  const thirdTabs = [ "Advanced Keypad"];
+  const forthTabs = ["EC3 guide", "EC4 guide", "EC5 guide"]
+  const tarDetail = {
+    "R 48” x 24”": {
+      title: "Bamboo",
+      des: "Truly environment-friendly bamboo desktop sourced from sustainable Forests. No pesticides or fertilizers are used",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/bamboo-rectangular-48x24-0913.png",
+      options: [
+        {
+          label: "Size",
+          value: "48” x 24”",
+        },
+        {
+          label: "Shape",
+          value: "Rectangular",
+        },
+        {
+          label: "Thickness",
+          value: "0.7”",
+        },
+        {
+          label: "Extra Components",
+          value: "None",
+        },
+      ],
+    },
+
+    "R 55” x 28”": {
+      title: "Bamboo",
+      des: "Truly environment-friendly bamboo desktop sourced from sustainable Forests. No pesticides or fertilizers are used",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/bamboo-rectangular-55x28-0913.png",
+      options: [
+        {
+          label: "Size",
+          value: "55” x 28”",
+        },
+        {
+          label: "Shape",
+          value: "Rectangular",
+        },
+        {
+          label: "Thickness",
+          value: "0.7”",
+        },
+        {
+          label: "Extra Components",
+          value: "None",
+        },
+      ],
+    },
+
+    "R 60” x 30”": {
+      title: "Bamboo",
+      des: "Truly environment-friendly bamboo desktop sourced from sustainable Forests. No pesticides or fertilizers are used",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/bamboo-rectangular-60x30-0913.png",
+      options: [
+        {
+          label: "Size",
+          value: "60” x 30”",
+        },
+        {
+          label: "Shape",
+          value: "Rectangular",
+        },
+        {
+          label: "Thickness",
+          value: "0.7”",
+        },
+        {
+          label: "Extra Components",
+          value: "None",
+        },
+      ],
+    },
+"R 72” x 30”": {
+      title: "Bamboo",
+      des: "Truly environment-friendly bamboo desktop sourced from sustainable Forests. No pesticides or fertilizers are used",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/bamboo-rectangular-72x30-0913.png",
+      options: [
+        {
+          label: "Size",
+          value: "72” x 30”",
+        },
+        {
+          label: "Shape",
+          value: "Rectangular",
+        },
+        {
+          label: "Thickness",
+          value: "0.7”",
+        },
+        {
+          label: "Extra Components",
+          value: "None",
+        },
+      ],
+    },
+    
+"R 78” x 30”": {
+      title: "Bamboo",
+      des: "Truly environment-friendly bamboo desktop sourced from sustainable Forests. No pesticides or fertilizers are used",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/bamboo-rectangular-78x30-0913.png",
+      options: [
+        {
+          label: "Size",
+          value: "78” x 30”",
+        },
+        {
+          label: "Shape",
+          value: "Rectangular",
+        },
+        {
+          label: "Thickness",
+          value: "0.7”",
+        },
+        {
+          label: "Extra Components",
+          value: "None",
+        },
+      ],
+    },
+    
+    "C 48” x 24”": {
+      title: "Bamboo",
+      des: "Truly environment-friendly bamboo desktop sourced from sustainable Forests. No pesticides or fertilizers are used",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/bamboo-curved-48x24-0913.png",
+      options: [
+        {
+          label: "Size",
+          value: "48” x 24”",
+        },
+        {
+          label: "Shape",
+          value: "Curved",
+        },
+        {
+          label: "Thickness",
+          value: "0.7”",
+        },
+        {
+          label: "Extra Components",
+          value: "None",
+        },
+      ],
+    },
+
+     "C 55” x 28”": {
+      title: "Bamboo",
+      des: "Truly environment-friendly bamboo desktop sourced from sustainable Forests. No pesticides or fertilizers are used",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/bamboo-curved-55x28-0913.png",
+      options: [
+        {
+          label: "Size",
+          value: "55” x 28”",
+        },
+        {
+          label: "Shape",
+          value: "Curved",
+        },
+        {
+          label: "Thickness",
+          value: "0.7”",
+        },
+        {
+          label: "Extra Components",
+          value: "None",
+        },
+      ],
+    },
+
+    "C 60” x 30”": {
+      title: "Bamboo",
+      des: "Truly environment-friendly bamboo desktop sourced from sustainable Forests. No pesticides or fertilizers are used",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/bamboo-curved-60x30-0913.png",
+      options: [
+        {
+          label: "Size",
+          value: "60” x 30”",
+        },
+        {
+          label: "Shape",
+          value: "Curved",
+        },
+        {
+          label: "Thickness",
+          value: "0.7”",
+        },
+        {
+          label: "Extra Components",
+          value: "None",
+        },
+      ],
+    },
+"C 72” x 30”": {
+      title: "Bamboo",
+      des: "Truly environment-friendly bamboo desktop sourced from sustainable Forests. No pesticides or fertilizers are used",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/bamboo-curved-72x30-0913.png",
+      options: [
+        {
+          label: "Size",
+          value: "72” x 30”",
+        },
+        {
+          label: "Shape",
+          value: "Curved",
+        },
+        {
+          label: "Thickness",
+          value: "0.7”",
+        },
+        {
+          label: "Extra Components",
+          value: "None",
+        },
+      ],
+    },
+    
+"C 78” x 30”": {
+      title: "Bamboo",
+      des: "Truly environment-friendly bamboo desktop sourced from sustainable Forests. No pesticides or fertilizers are used",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/bamboo-curved-78x30-0913.png",
+      options: [
+        {
+          label: "Size",
+          value: "78” x 30”",
+        },
+        {
+          label: "Shape",
+          value: "Curved",
+        },
+        {
+          label: "Thickness",
+          value: "0.7”",
+        },
+        {
+          label: "Extra Components",
+          value: "None",
+        },
+      ],
+    },
+    
+    
+    
+    "EC3": {
+      title: "Pro 2-stage Frame",
+      des: "Strong and stable, better quality and greater performance for your daily use comparing to normal single-motor standing desk.",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/EC3-0909.png",
+      options: [
+        {
+          label: "Motor",
+          value: "Dual-motor",
+        },
+        {
+          label: "Loading Capacity",
+          value: "220lbs",
+        },
+        {
+          label: "Leg Section",
+          value: "2-stage",
+        },
+        {
+          label: "Adjustable Height",
+          value: "27.2”-46.5”",
+        },
+        {
+          label: "Adjustable Width",
+          value: "43.4”-66.9”",
+        },
+        {
+          label: "Applicable Desktop",
+          value: "47.2-78.7” width",
+        },
+      ],
+    },
+
+    "EC5": {
+      title: "Pro 3-stage Frame (Inverted )",
+      des: "Wider adjustable range meets your extra adjustable needs, the most cost-effective frame available for your whole family.",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/EC5.png",
+      options: [
+        {
+          label: "Motor",
+          value: "Dual-motor",
+        },
+        {
+          label: "Loading Capacity",
+          value: "220lbs",
+        },
+        {
+          label: "Leg Section",
+          value: "3-stage",
+        },
+        {
+          label: "Adjustable Height",
+          value: "24.4”-50”",
+        },
+        {
+          label: "Adjustable Width",
+          value: "43.4”-66.9”",
+        },
+        {
+          label: "Applicable Desktop",
+          value: "47.2-78.7” width",
+        },
+      ],
+    },
+    
+    "EC4": {
+      title: "Pro 3-stage Frame",
+      des: "Best choice for most people! Higher loading capacity and even faster lifting speed, wider adjustable range perfect for versatility like live streaming, complex crafting and child learning.",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/EC4-0909.png",
+      video: 'https://www.youtube.com/embed/e1Y1-fvOSmY?enablejsapi=1',
+      options: [
+        {
+          label: "Motor",
+          value: "Dual-motor",
+        },
+        {
+          label: "Loading Capacity",
+          value: "275lbs",
+        },
+        {
+          label: "Leg Section",
+          value: "3-stage",
+        },
+        {
+          label: "Adjustable Height",
+          value: "22.8”-48.4”",
+        },
+        {
+          label: "Adjustable Width",
+          value: "43.4”-66.9”",
+        },
+        {
+          label: "Applicable Desktop",
+          value: "47.2-78.7” width",
+        },
+      ],
+    },
+
+    "Advanced Keypad": {
+      title: "Advanced Keypad",
+      des: "With the advanced keypad, you can enjoy the sit-stand reminder, more preset positions, as well as the anti-collision feature which would stop the motion when encounter obstracles. The LED display will also automatically enter sleep mode to reduce power when the desk is stationary.",
+      img: "https://www.flexispot.com/media/wysiwyg/product/Dimensions/HS11A-01.png",
+      options: [
+        {
+          label: "Memory Presets",
+          value: "Yes",
+        },
+        {
+          label: "Sit-Stand Reminder",
+          value: "Yes",
+        },
+        
+      ],
+    },
+  };
+  
+
+  
+  
+  let indexTab = "";
+  // 公共方法
+  function createContent(id, targetId, expand = "") {
+    const options = tarDetail[id].options;
+    const target = document.getElementById(targetId);
+    const content =
+      options
+        .map((item) => {
+          return `<section>
+                  <div class="right-bottom-title">${item.label}</div>
+                  <div class="right-bottom-txt">${item.value}</div>
+                  <p></p>
+                </section>`;
+        })
+        .join("") + expand;
+    target.innerHTML = content;
+  }
+
+  function createFirstTitle(key, targetId) {
+    const target = document.getElementById(targetId);
+    const title = Object.keys(firstTabs);
+    const content = title
+      .map((item, index) => {
+        return `<div class="left-tab-item ${
+          item === key ? "activeTabClass" : ""
+          }" onclick="handleChangeTitle('${item}')">
+                  <span>${item}</span>
+                  <p></p>
+                </div>`;
+      })
+      .join("");
+    target.innerHTML = content;
+  }
+
+  function createFirstTabs(key, targetId) {
+    indexTab = firstTabs[key][0];
+    const target = document.getElementById(targetId);
+    const content = firstTabs[key]
+      .map((item) => {
+        return `<span
+                  class="left-bottom-txt ${
+          item === indexTab ? "activeItemClass" : ""
+          }"
+                  onclick="handleChangeSize(this, '${item}')"
+                >
+                  <p></p>
+                  <span>${item}</span>
+                </span>`;
+      })
+      .join("");
+    target.innerHTML = content;
+  }
+
+  function createFirstContent(key) {
+    const model = tarDetail[key];
+    document.getElementById("firstText").innerHTML = model.title;
+    document.getElementById("firstArticle").innerHTML = model.des;
+    if (document.getElementById("firstImage")) {
+      document.getElementById("firstImage").src = model.img;
+    } else {
+      document.getElementById("firstVideo").src = model.video;
+    }
+    createContent(key, "firstContent");
+  }
+
+  function handleChangeTitle(key) {
+    createFirstTitle(key, "firstTitle"), createFirstTabs(key, "firstTabs");
+    document.getElementById("firstTabs").firstChild.click();
+  }
+
+  function handleChangeSize(el, key) {
+    indexTab = key;
+    Array.prototype.forEach.call(
+      el.parentNode.getElementsByClassName("left-bottom-txt"),
+      (item) => {
+        item.setAttribute("class", "left-bottom-txt");
+      }
+    );
+    el.setAttribute("class", "left-bottom-txt activeItemClass");
+    createFirstContent(key);
+  }
+
+  function createSecondTitle(key, targetId) {
+    const target = document.getElementById(targetId);
+    const content = secondTabs
+      .map((item, index) => {
+        return `<div class="left-tab-item" onclick="handleSecondContent(this, '${item}')">
+                  <span>${item}</span>
+                  <p></p>
+                </div>`;
+      })
+      .join("");
+    target.innerHTML = content;
+  }
+
+  function handleSecondContent(el, key) {
+    Array.prototype.forEach.call(
+      el.parentNode.getElementsByClassName("left-tab-item"),
+      (item) => {
+        item.setAttribute("class", "left-tab-item");
+      }
+    );
+    el.setAttribute("class", "left-tab-item activeTabClass");
+
+    const model = tarDetail[key];
+    document.getElementById("secondText").innerHTML = model.title;
+    document.getElementById("secondArticle").innerHTML = model.des;
+    if (document.getElementById("secondImage")) {
+      document.getElementById("secondImage").src = model.img;
+    } else {
+      document.getElementById("secondVideo").src = model.video;
+    }
+
+
+    const expand = `<span @click="handleCheckSpecs('http://www.baidu.com')">Check SPECS Comparison</span>`;
+    createContent(key, "secondContent", expand);
+  }
+
+  function createThirdTitle(key, targetId) {
+    const target = document.getElementById(targetId);
+    const content = thirdTabs
+      .map((item, index) => {
+        return `<div class="left-tab-item" onclick="handleThirdContent(this, '${item}')">
+                  <span>${item}</span>
+                  <p></p>
+                </div>`;
+      })
+      .join("");
+    target.innerHTML = content;
+  }
+
+  function handleThirdContent(el, key) {
+    Array.prototype.forEach.call(
+      el.parentNode.getElementsByClassName("left-tab-item"),
+      (item) => {
+        item.setAttribute("class", "left-tab-item");
+      }
+    );
+    el.setAttribute("class", "left-tab-item activeTabClass");
+
+    const model = tarDetail[key];
+    document.getElementById("thirdText").innerHTML = model.title;
+    document.getElementById("thirdArticle").innerHTML = model.des;
+    if (document.getElementById("thirdImage")) {
+      document.getElementById("thirdImage").src = model.img;
+    } else {
+      document.getElementById("thirdVideo").src = model.video;
+    }
+    const expand = `<span @click="handleCheckSpecs('http://www.baidu.com')">Check SPECS Comparison</span>`;
+    createContent(key, "thirdContent", expand);
+  }
+
+  function createForthTitle(key, targetId) {
+    const target = document.getElementById(targetId);
+    const content = secondTabs
+      .map((item, index) => {
+        return `<div class="left-tab-item" onclick="handleForthContent(this, '${item}')">
+                  <span>${item}</span>
+                  <p></p>
+                </div>`;
+      })
+      .join("");
+    target.innerHTML = content;
+  }
+
+  function handleForthContent(el, key) {
+    Array.prototype.forEach.call(
+      el.parentNode.getElementsByClassName("left-tab-item"),
+      (item) => {
+        item.setAttribute("class", "left-tab-item");
+      }
+    );
+    el.setAttribute("class", "left-tab-item activeTabClass");
+
+    const model = tarDetail[key];
+    document.getElementById("forthText").innerHTML = model.title;
+    document.getElementById("forthArticle").innerHTML = model.des;
+    if (document.getElementById("forthImage")) {
+      document.getElementById("forthImage").src = model.img;
+    } else {
+      document.getElementById("forthVideo").src = model.video;
+    }
+
+
+    const expand = `<span @click="handleCheckSpecs('http://www.baidu.com')">Check SPECS Comparison</span>`;
+    createContent(key, "forthContent", expand);
+  }
+
+
+  function init() {
+    const firstKey = Object.keys(firstTabs)[0];
+    createFirstTitle(firstKey, "firstTitle");
+    createFirstTabs(firstKey, "firstTabs");
+    document.getElementById("firstTabs").firstChild.click();
+
+    const secondKey = secondTabs[0];
+    createSecondTitle(secondKey, "secondTitle");
+    document.getElementById("secondTitle").firstChild.click();
+
+    const thirdKey = thirdTabs[0];
+    createThirdTitle(thirdKey, "thirdTitle");
+    document.getElementById("thirdTitle").firstChild.click();
+  }
+  init();
+</script>
+
+</html>
